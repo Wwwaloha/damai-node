@@ -1,0 +1,280 @@
+*{
+    margin:0px; padding:0px;  font-family:微软雅黑;
+}
+body{
+  background: #f8f8f8;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10%;
+    background: white;
+    box-sizing: border-box;
+} 
+.img{
+  width: 120px;
+}
+.top img{
+  width: 100%;
+}
+.top a{
+  display: inline-block;
+}
+.top input{
+  height: 30px;
+  width: 100px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top: 12px;
+}
+.content{
+    width: 100%;
+    background-color: #f8f8f8;
+    margin: 40px 0;
+}
+.main{
+  width: 80%;
+  background: white;
+  margin: 0 auto;
+  padding: 50px;
+}
+form {
+    width: 40%;
+    margin: 0 auto;
+}
+.require{
+    color: red;
+    padding: 5px;
+}
+.errorTip{
+    padding-left: 93px;
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+.input{
+    display: flex;
+    height: 35px;
+    padding: 10px;
+}
+ span{
+    display: block;
+    line-height: 35px;
+    color: #828282;
+    font-size: 12px;
+    padding: 0 10px;
+ }
+select{
+    height: 100%;
+    width: 39%;
+    float: left;
+}
+
+.otherInput{
+    width: 75%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 12px;
+}
+.input1 input{
+    float: left;
+    height: 87%;
+    width: 76%;
+}
+.p{
+    float: left;
+    margin-left: -34%;
+    margin-top: 4%;
+    font-size: 12px;
+    color: #828282;
+}
+.drag{
+    height: 8%;
+    width: 26%;
+    line-height: 40px;
+    background-color: #e8e8e8;
+    position: relative;
+    margin:0 auto;
+    margin-top: 3%;
+    margin-left: -26%;
+    float: left;
+}
+.bg{
+    width:40px;
+    height: 100%;
+    position: absolute;
+    background-color: #75CDF9;
+}
+.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+    font-size: 12px;
+    color: #828282;
+}
+.btn{
+    width: 18%;
+    height: 36px;
+    position: absolute;
+    border:1px solid #ccc;
+    cursor: move;
+    text-align: center;
+    background-color: #fff;
+    user-select: none;
+    color:#666;
+}
+.checkbox{
+    display: flex;
+    font-size: 12px;
+    color: #828282;
+    margin: 0 auto;
+    padding: 20px 35px;
+    align-items: center;
+}
+.checkbox a{
+    color:dodgerblue ;
+    text-decoration: none;
+}
+.rule{
+    padding-left: 5px;
+}
+.submit_button{
+    text-align: center;
+}
+#login{
+    font-size: 12px;
+    margin-left: 10px;
+    color: dodgerblue;
+}
+#checkTip{
+    padding-left: 35px;
+}
+.input2{
+    width: 25%;
+    padding: 8px;
+    background-color: deeppink;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    outline: none;
+}
+/* 提示 */
+.message_tip{
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  z-index: 1010;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  pointer-events: none;
+}
+.message_tip {
+  padding: 8px;
+  text-align: center;
+} 
+.message_content{
+  padding: 10px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  display: inline-block;
+  pointer-events: all;
+}
+.message_custom_content span:last-child{
+  padding-left: 10px;
+  font-size: 14px;  
+}
+.message_custom_content{
+  display: flex;
+  align-items: center;
+}
+.icon {
+  display: block;
+  font-size: 16px;  
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.success{
+  background: mediumseagreen;
+}
+.success::after{
+  content: "\2714";
+  display: block;
+  color: white;
+  font-size: 13px;
+}
+.error{
+  background: #f5222d;
+}
+.error::after{
+  content: "\2716";
+  display: block;
+  color: white;
+  font-size: 13px;
+}
+.footer{
+    background-color: #f8f8f8;
+    font-size: 8px;
+    color: #666;
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    padding: 0 15px;
+    border-right: 1px solid #ccc;
+}
+.first_line{
+    padding-top: 20px;
+}
+.second_line{
+    display: flex;
+    padding: 50px 150px;
+}
+.logo{
+    width: 10%;
+}
+.erweima{
+    width: 10%;
+    margin: 0 50px;
+}
+.logo_f img{
+    width: 100%;
+}
+.erweima img{
+    width: 100%;
+}
+.qianhao{
+    text-align: left;
+    font-size: 20px;
+}
+#special{
+    padding-left: 0;
+}
+.footer p{
+    text-align: left;
+    font-size: 13px;
+    padding: 10px 0;
+}
+.shangjiaImg{
+    text-align: left;
+}
+.footer a:hover{
+    color: deeppink;
+}

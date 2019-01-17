@@ -1,0 +1,135 @@
+doctype html
+head
+  meta(charset="utf-8") 
+  title 个人中心 
+  link(rel="stylesheet",href="./stylesheets/css/bootstrap.min.css")
+  link(rel="stylesheet",href="./stylesheets/userInfo.css")
+body
+  .user-header
+    .header-logo
+      img.h-logo(src='images/header/logo.png', alt='')
+    .header-nav
+      .nav
+        a.nav-left(href='') 首页
+        a.nav-right(href='') 分类
+    .header-search
+      img.search-icon(src='images/header/search.png', alt='')
+      input.search-input(type='text', placeholder='搜索明星、演出、体育赛事')
+      .search-btn 搜索
+    .header-right
+      .login
+        img.login-img(src='images/header/login.png', alt='')
+        span 登录
+        .login-wrap
+          p
+          .login-list
+            a.login-li(href='') 个人信息
+            a.login-li(href='') 账号设置
+            a.login-li(href='') 订单管理
+      .download
+        img.download-img(src='images/header/download.png', alt='')
+        span 下载
+        .download-mode
+          img.mode-img(src='images/header/f-icon.png', alt='')
+      .English
+        img.English-img(src='images/header/english.png', alt='')
+        span English
+  .content
+    .content_nav
+      .title 我的大麦
+      .trade_center
+        .tc_title 交易中心
+        .content_list
+          a(href="javascript:;") 订单管理
+          a(href="javascript:;") 我的优惠券  
+      .account_center
+        .tc_title 账户中心  
+        .content_list
+          a(href="javascript:;") 收货地址
+          a(href="javascript:;") 账号设置
+          a(href="javascript:;") 个人信息
+          a(href="javascript:;") 常用购票人
+    .content_detail
+      .detail_title 个人信息
+      .baseInfo 
+        .bi_title 
+          span 基本资料
+        .bi_detail
+          .inform 完善更多个人信息，有助于我们为您提供更加个性化的服务，大麦网将尊重并保护您的隐私。
+          .info_input
+            span.require 昵称:
+            input(type="text",name="username",value=`${userInfo && userInfo[0].username? userInfo[0].username: ""}`,required)
+          .info_input
+            span 真实姓名:  
+            input(type="text",name="name",disabled)
+          .info_input#sex
+            span.require 性别:
+            .sex
+              if(userInfo && userInfo[0].sex == "男")
+                input(type="radio",value="男",name="sex",checked) 
+              else
+                input(type="radio",value="男",name="sex") 
+              span 男
+              span.boy
+              if(userInfo && userInfo[0].sex == "女")
+                input(type="radio",value="女",name="sex",checked) 
+              else
+                input(type="radio",value="女",name="sex") 
+              span 女
+              span.girl
+          .info_input
+            span 出生日期:
+            input(type="text",placeholder="格式为xxxx-xx-xx",name="birthday",value=`${userInfo && userInfo[0].birthday?userInfo[0].birthday:""}`)
+          .info_input
+            span 身份证号:
+            input(type="text",name="idCard",disabled)
+          button#save 保存       
+          button#repair 修改    
+  // 主体部分 end
+  .footer
+    .first_line
+      a(href="#") 帮助中心
+      a(href="#") 公司介绍
+      a(href="#") 品牌识别
+      a(href="#") 公司大事记
+      a(href="#") 协议及隐私权政策
+      a(href="#") 廉正举报
+      a(href="#") 联系合作
+      a(href="#") 招聘信息
+      a(href="#") 防骗秘籍
+    .second_line
+      .logo_f
+        img(src="./images/logo_f.png")
+      .erweima
+        img(src="./images/erweima_f.png")
+        p APP下载
+      div
+        .qianhao
+          a(href="#", id="special") 京ICP证031057号
+          a(href="#") 京ICP备11043884号
+          a(href="#") 京公网安备11010102000430号
+          a(href="#") 广播电视节目制作经营许可证 (京)字第02253号
+          a(href="#") 网络文化经营许可证 京网文[2016]3438-413号
+          a(href="#") 营业性演出许可证 京市演587号
+        p 北京红马传媒文化发展有限公司 版权所有大麦网Copyright 2003-2018 All Rights Reserved
+        .shangjiaImg
+          img(src="./images/footer1.gif")
+          img(src="./images/footer2.png")
+          img(src="./images/footer3.png")
+          img(src="./images/footer4.png")
+          img(src="./images/footer5.png")
+  .sidebar
+    .item
+      a(href='#')
+        .icon.service
+        p 在线客服
+    .item
+      a(href='#')
+        .icon.damai
+        p APP下载
+    .item
+      a(href='#')
+        .icon.J_GoTop
+        p 回到顶部
+  script(src="./javascripts/jquery-3.3.1.js")
+  script(src="./javascripts/userAjax.js")      

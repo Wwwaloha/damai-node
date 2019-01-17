@@ -1,0 +1,910 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title -大麦搜索
+    link(rel='stylesheet', href='./stylesheets/search.css')
+    link(rel='stylesheet', href='./stylesheets/header.css')
+    link(rel='stylesheet', href='./stylesheets/jquery.cxcalendar.css')
+  body
+    .header
+      .header-logo
+        img.h-logo(src='images/header/logo.png', alt='')
+      .header-nav
+        .header-location
+          img.location-icon(src='images/header/city.png', alt='')
+          span.location-city 全国
+          img.list-icon(src='images/header/arrow.png', alt='')
+          .header-list
+            .header-city
+              .now-city
+                span.title-city 当前城市：
+                span.select-city 全国
+              .hot-city
+                span.title-city 热门城市：
+                .list-other
+                  span.city-name 全国
+                  span.city-name 北京
+                  span.city-name 上海
+                  span.city-name 深圳
+                  span.city-name 广州
+                  span.city-name 杭州
+                  span.city-name 天津
+                  span.city-name 重庆
+                  span.city-name 成都
+                  span.city-name 香港
+              .other-city
+              span.title-city 其他城市:
+              .list-other
+                span.city-name 北京
+                span.city-name 上海
+                span.city-name 深圳
+                span.city-name 天津
+                span.city-name 成都
+                span.city-name 杭州
+                span.city-name 广州
+                span.city-name 南京
+                span.city-name 重庆
+                span.city-name 武汉
+                span.city-name 西安
+                span.city-name 苏州
+                span.city-name 长沙
+                span.city-name 昆明
+                span.city-name 贵阳
+                span.city-name 大连
+                span.city-name 宁波
+                span.city-name 合肥
+                span.city-name 长春
+                span.city-name 厦门
+                span.city-name 香港
+                span.city-name 济南
+                span.city-name 石家庄
+                span.city-name 无锡
+                span.city-name 哈尔滨
+                span.city-name 南昌
+                span.city-name 嘉兴
+                span.city-name 沈阳
+                span.city-name 福州
+                span.city-name 郑州
+                span.city-name 佛山
+                span.city-name 常州
+                span.city-name 太原
+                span.city-name 包头
+                span.city-name 东莞
+                span.city-name 南宁
+                span.city-name 中山
+                span.city-name 绍兴
+                span.city-name 海口
+                span.city-name 呼和浩特
+                span.city-name 兰州
+                span.city-name 潍坊
+                span.city-name 澳门
+                span.city-name 银川
+                span.city-name 珠海
+                span.city-name 惠州
+                span.city-name 扬州
+                span.city-name 宜昌
+                span.city-name 河源
+                span.city-name 唐山
+                span.city-name 江门
+                span.city-name 金华
+                span.city-name 台州
+                span.city-name 绵阳
+                span.city-name 泉州
+                span.city-name 南通
+                span.city-name 萍乡
+                span.city-name 桂林
+                span.city-name 吉林
+                span.city-name 洛阳
+                span.city-name 马鞍山
+                span.city-name 内江
+                span.city-name 乌鲁木齐
+                span.city-name 芜湖
+                span.city-name 株洲
+                span.city-name 淄博
+                span.city-name 安顺
+                span.city-name 德州
+                span.city-name 乐山
+                span.city-name 盘锦
+                span.city-name 黔南
+                span.city-name 汕头
+                span.city-name 遂宁
+                span.city-name 泰安
+                span.city-name 温州
+                span.city-name 咸阳
+                span.city-name 玉溪
+                span.city-name 遵义
+                span.city-name 阿坝
+                span.city-name 安庆
+                span.city-name 蚌埠
+                span.city-name 昌吉
+                span.city-name 大同
+                span.city-name 丹东
+                span.city-name 德阳
+                span.city-name 鄂尔多斯
+                span.city-name 防城港
+                span.city-name 赣州
+                span.city-name 广元
+                span.city-name 海东
+                span.city-name 邯郸
+                span.city-name 湖州
+                span.city-name 嘉峪关
+                span.city-name 焦作
+                span.city-name 锦州
+                span.city-name 晋中
+                span.city-name 荆州
+                span.city-name 九江
+                span.city-name 酒泉
+                span.city-name 廊坊
+                span.city-name 丽江
+                span.city-name 丽水
+                span.city-name 连云港
+                span.city-name 牡丹江
+                span.city-name 平顶山
+                span.city-name 黔东南
+                span.city-name 钦州
+                span.city-name 上饶
+                span.city-name 铜陵
+                span.city-name 梧州
+                span.city-name 西宁
+                span.city-name 咸宁
+                span.city-name 襄阳
+                span.city-name 湘潭
+                span.city-name 新乡
+                span.city-name 新余
+                span.city-name 邢台
+                span.city-name 徐州
+                span.city-name 宜宾
+                span.city-name 益阳
+                span.city-name 榆林
+                span.city-name 玉林
+                span.city-name 湛江
+                span.city-name 镇江
+                span.city-name 舟山
+                span.city-name 资阳
+                span.city-name 亳州
+                span.city-name 泸州
+                span.city-name 海外
+        .nav
+          a.nav-left(href='/index') 首页
+          a.nav-right(href='') 分类
+      .header-search
+        img.search-icon(src='images/header/search.png', alt='')
+        input.search-input(type='text', placeholder='搜索明星、演出、体育赛事')
+        .search-btn 搜索
+      .header-right
+        .login
+          .login_title
+            img.login-img(src='images/header/login.png', alt='')
+            span 登录
+          .login-wrap
+            p
+            .login-list
+              a.login-li(href='') 个人信息
+              a.login-li(href='') 账号设置
+              a.login-li(href='') 订单管理
+        .download
+          img.download-img(src='images/header/download.png', alt='')
+          span 下载
+          .download-mode
+            img.mode-img(src='images/header/f-icon.png', alt='')
+        .English
+          img.English-img(src='images/header/english.png', alt='')
+          span English
+    .s-wrapper
+      .s-search
+        .search-top
+        .search-main
+          .s-left
+            .s-choose
+              a.moreContent(href='javascript:void(0)')
+                span 更多
+                img(src='images/search/arrow-down.png')
+              dl.c-city
+                dt 城  市:
+                dd
+                  a.active(href='#') 全部
+                dd.show-all
+                  ul
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                  ul.c-c-more
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+                    li
+                      a(href='#') 北京
+                    li
+                      a(href='#') 上海
+                    li
+                      a(href='#') 深圳
+                    li
+                      a(href='#') 天津
+                    li
+                      a(href='#') 杭州
+                    li
+                      a(href='#') 成都
+                    li
+                      a(href='#') 广州
+                    li
+                      a(href='#') 重庆
+                    li
+                      a(href='#') 武汉
+                    li
+                      a(href='#') 南京
+                    li
+                      a(href='#') 西安
+                    li
+                      a(href='#') 苏州
+                    li
+                      a(href='#') 长沙
+                    li
+                      a(href='#') 大连
+                    li
+                      a(href='#') 宁波
+                    li
+                      a(href='#') 长春
+                    li
+                      a(href='#') 青岛
+                    li
+                      a(href='#') 厦门
+                    li
+                      a(href='#') 合肥
+                    li
+                      a(href='#') 香港
+              dl.c-classify
+                dt 分  类:
+                dd
+                  a.active(href='#') 全部
+                dd.show-all
+                  ul
+                    li
+                      a(href='/search?type=opera') 话剧歌剧
+                    li
+                      a(href='#') 音乐会
+                    li
+                      a(href='/search?type=concert') 演唱会
+                    li
+                      a(href='#') 曲苑杂坛
+                    li
+                      a(href='#') 度假休闲
+                    li
+                      a(href='#') 舞蹈芭蕾
+                    li
+                      a(href='/search?type=match') 体育比赛
+                    li
+                      a(href='#') 周边商品
+                    li
+                      a(href='#') 电影优惠券
+                    li
+                      a(href='/search?type=family') 儿童亲子
+                    li
+                      a(href='#') 动漫
+                    li
+                      a(href='#') 旅游展览
+                    li
+                      a(href='#') 旅游演艺
+              dl.c-date
+                dt 时  间:
+                dd
+                  a.active(href='#') 全部
+                dd.show-all
+                  ul
+                    li
+                      a(href='#') 今天
+                    li
+                      a(href='#') 明天
+                    li
+                      a(href='#') 本周末
+                    li
+                      a(href='#') 一个月内
+                    li
+                      span 按时间段:
+                      input#date_a(type='text')
+                      |                                          -
+                      input#date_b(type='text')
+                    li
+                      a.s-calendar(href='#') 按日历
+            .s-show-main.tab-wrapper
+              .tab-content
+                ul.s-list
+                  each catalogs,index in catalog
+                    li
+                      a.s-cover(href=`/detail?name=${catalogs.name}&type=${catalogs.type}`)
+                        img(src=catalogs.imageUrl, alt='')
+                      .s-info
+                        p.s-title
+                          | #{catalogs.place}
+                          a(href=`/detail?name=${catalogs.name}&type=${catalogs.type}`) #{catalogs.name}
+                        if(catalogs.advert)
+                          p.s-advert #{catalogs.advert}   
+                        p 
+                          span.s-logo.s-rili  
+                          |#{catalogs.showTime}
+                        p 
+                          span.s-logo.s-address
+                          |#{catalogs.address}
+                        p.s-price
+                          strong #{catalogs.price}
+                          if(catalogs.ticketStatus == 2)
+                            | 预售
+                          if(catalogs.ticketStatus == 3)
+                            | 售票中  
+                div.loadmore
+                  button#loadmore 点击加载更多             
+          .s-right
+            .guess
+              .title
+                p 您可能还喜欢
+              .guess-box
+                ul
+                  li
+                    a.g-cover(href='#')
+                      img(src='images/search/g1.jpg', alt='')
+                    .g-info
+                      p.g-title
+                        a(href='#') 鹿晗2018“RE:X”巡回演唱会 北京站
+                      span 工人体育场
+                      br
+                      span 2018-10-06 19:30:00
+                      p.g-price
+                        strong 577.0元
+                        | 起
+                  li
+                    a.g-cover(href='#')
+                      img(src='images/search/g2.jpg', alt='')
+                    .g-info
+                      p.g-title
+                        a(href='#') 五月天2018LIFE【人生无限公司】巡回演唱会
+                      span 国家体育场
+                      br
+                      span 2018-10-06 19:30:00
+                      p.g-price
+                        strong 1655.0元
+                        | 起
+                  li
+                    a.g-cover(href='#')
+                      img(src='images/search/g3.jpg', alt='')
+                    .g-info
+                      p.g-title
+                        a(href='#') 2018麦田音乐家
+                      span 工人体育场
+                      br
+                      span 2018-10-06 19:30:00
+                      p.g-price
+                        strong 40.0元
+                        | 起        
+      .sidebar
+        .item
+          a(href='#')
+            .icon.service
+            p 在线客服
+        .item
+          a(href='#')
+            .icon.damai
+            p APP下载
+        .item#backTop
+          a(href='javascripts:;')
+            .icon.J_GoTop
+            p 回到顶部                         
+    .footer
+      .footer-links
+        ul.links
+          li
+            a(href='') 帮助中心
+          li |
+          li
+            a(href='') 公司介绍
+          li |
+          li
+            a(href='') 品牌识别
+          li |
+          li
+            a(href='') 公司大事记
+          li |
+          li
+            a(href='') 隐私权专项政策
+          li |
+          li
+            a(href='') 廉政举报
+          li |
+          li
+            a(href='') 联系合作
+          li |
+          li
+            a(href='') 招聘信息
+          li |
+          li
+            a(href='') 防骗秘籍
+      .footer-band
+        .footer-left
+          a(href='')
+            img(src='images/header/f-logo.png', alt='')
+          .footer-left-2
+            img(src='images/header/f-icon.png', alt='')
+            span APP下载
+        .footer-right
+          .footer-btn
+            a(href='') 在线客服
+          ul.footer-right-links
+            li
+              a(href='') 京ICP证031057号
+            li.footer-right-dep |
+            li
+              a(href='') 京ICP备11043884号
+            li.footer-right-dep |
+            li
+              a(href='') 京公网安备11010102000430号
+            li.footer-right-dep |
+            li
+              a(href='')
+                | 广播电视节目制作经营许可证
+                | (京)字第02253号
+          ul.footer-right-links
+            li
+              a(href='')
+                | 网络文化经营许可证
+                | 京网文[2016]3438-413号
+            li.footer-right-dep |
+            li
+              a(href='')
+                | 营业性演出许可证
+                | 京市演587号
+          ul.footer-right-links
+            li
+              span 北京红马传媒文化发展有限公司 版权所有
+            li
+              a(href='') 大麦网
+            li
+              span Copyright 2003-2018 All Rights Reserved
+          .footer-img
+            a(href='')
+              img.f-img-1(src='images/header/f1.gif', alt='')
+            a(href='')
+              img.f-img-2(src='images/header/f2.png', alt='')
+            a(href='')
+              img.f-img-3(src='images/header/f3.png', alt='')
+            a(href='')
+              img.f-img-4(src='images/header/f4.png', alt='')
+            a(href='')
+              img.f-img-5(src='images/header/f5.png', alt='')
+    script(src='./javascripts/jquery-3.3.1.js')
+    script(src='./javascripts/jquery.cxcalendar.js')
+    script(src='./javascripts/search.js')
+    script(src='./javascripts/loadAjax.js')
+    script(src='./javascripts/backTop.js')

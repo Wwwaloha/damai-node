@@ -1,0 +1,38 @@
+.footer{
+    width: 100%;
+    font: 12px/1.14 "Microsoft Yahei", arial;
+}
+.f-top{
+    border-top: 1px solid #e5e5e5;
+    background: #f5f5f5;
+}
+.f-t-middle{
+    padding: 10px;
+    text-align: center;
+    line-height: 24px;
+    color: #d9d9d9;
+}
+.f-t-middle>a{
+    margin: 0 5px;
+    color: #666;
+    text-decoration: none;
+}
+.f-box{
+    width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 24px;
+    color: #666;
+    padding: 5px 0 30px 0;
+}
+.f-box>p{
+    padding: 10px;
+}
+.f-box>p>a{
+    margin: 0 5px;
+    color: #666;
+    text-decoration: none;
+}
+.f-box>p>span{
+    color: #d9d9d9;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="./stylesheets/register.css">
+</head>
+<body>
+  <div class="top"><a href=""><img src="./images/logo.png"></a><a href="">
+      <input type="button" value="English"></a></div>
+  <div class="content">
+    <div class="main">
+      <form action="/register" method="post" onsubmit="check">
+        <div class="input"><span><i class="require">*</i>手机号码</span>
+          <input class="otherInput" type="text" placeholder="请输入你的手机号" name="phone">
+        </div>
+        <div class="errorTip" id="phoneError"></div>
+        <div class="input"><span><i class="require">*</i>登录密码</span>
+          <input class="otherInput" type="password" placeholder="请输入你的登录密码" name="password">
+        </div>
+        <div class="errorTip" id="passError"></div>
+        <div class="input"><span><i class="require">*</i>密码确认</span>
+          <input class="otherInput" type="password" placeholder="请再次输入你的登录密码" name="confirmPwd">
+        </div>
+        <div class="errorTip" id="confirmPwdError"></div>
+        <div class="checkbox">
+          <input type="checkbox">
+          <p class="rule">我已阅读并同意<a href="">《会员协议》</a><a href="">《隐私权条款》</a></p>
+        </div>
+        <div class="submit_button">
+          <input class="input2" type="submit" value="注册">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="first_line"><a href="#">帮助中心</a><a href="#">公司介绍</a><a href="#">品牌识别</a><a href="#">公司大事记</a><a href="#">协议及隐私权政策</a><a href="#">廉正举报</a><a href="#">联系合作</a><a href="#">招聘信息</a><a href="#">防骗秘籍</a></div>
+    <div class="second_line">
+      <div class="logo_f"><img src="./images/logo_f.png"></div>
+      <div class="erweima"><img src="./images/erweima_f.png">
+        <p>APP下载</p>
+      </div>
+      <div>
+        <div class="qianhao"><a href="#" id="special">京ICP证031057号</a><a href="#">京ICP备11043884号</a><a href="#">京公网安备11010102000430号</a><a href="#">广播电视节目制作经营许可证 (京)字第02253号</a><a href="#">网络文化经营许可证 京网文[2016]3438-413号</a><a href="#">营业性演出许可证 京市演587号</a></div>
+        <p>北京红马传媒文化发展有限公司 版权所有大麦网Copyright 2003-2018 All Rights Reserved</p>
+        <div class="shangjiaImg"><img src="./images/footer1.gif"><img src="./images/footer2.png"><img src="./images/footer3.png"><img src="./images/footer4.png"><img src="./images/footer5.png"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./javascripts/jquery-3.3.1.js"></script>
+  <script src="./javascripts/register.js"></script>
+</body>

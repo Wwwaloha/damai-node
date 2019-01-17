@@ -1,0 +1,695 @@
+doctype html
+head
+    meta(charset="utf-8")
+    title detail
+    link(rel="stylesheet", href="./stylesheets/detail.css")
+    link(rel="stylesheet", href="./stylesheets/detail-footer.css")
+    script(src="./javascripts/jquery-3.3.1.js")
+    script(src="./javascripts/detail.js")
+body
+    .head
+        .head-nav
+            img.logo(src="./images/detail-logo.png", alt="")
+            .city
+                a.province-a(href="javascript:;")
+                    span.province-menu 杭州站
+                    p.triangle
+                .place-nav
+                    dl.place-part
+                        dt.pn-left 华北东北
+                        dd
+                            ul
+                                li
+                                    a(title="北京", href="//www.damai.cn/bj/", target="_blank") 北京
+                                    cite 749
+                                    a(title="西安", href="//www.damai.cn/bj/", target="_blank") 西安
+                                    cite 124
+                                    a(title="济南", href="//www.damai.cn/bj/", target="_blank") 济南
+                                    cite 44
+                                    a(title="太原", href="//www.damai.cn/bj/", target="_blank") 太原
+                                    cite 36
+                                    a(title="哈尔滨", href="//www.damai.cn/bj/", target="_blank") 哈尔滨
+                                    cite 28
+                                    a(title="天津", href="//www.damai.cn/bj/", target="_blank") 天津
+                                    cite 171
+                                    a(title="郑州", href="//www.damai.cn/bj/", target="_blank") 郑州
+                                    cite 31
+                                    a(title="石家庄", href="//www.damai.cn/bj/", target="_blank") 石家庄
+                                    cite 42
+                                    a(title="沈阳", href="//www.damai.cn/bj/", target="_blank") 沈阳
+                                    cite 29
+                                    a(title="内蒙古", href="//www.damai.cn/bj/", target="_blank") 内蒙古
+                                    cite 34
+                                    a(title="长春", href="//www.damai.cn/bj/", target="_blank") 长春
+                                    cite 45
+                                    a(title="青岛", href="//www.damai.cn/bj/", target="_blank") 青岛
+                                    cite 47
+                                    a(title="大连", href="//www.damai.cn/bj/", target="_blank") 大连
+                                    cite 59
+                                    a(title="唐山", href="//www.damai.cn/bj/", target="_blank") 唐山
+                                    cite 1
+                                    a(title="银川", href="//www.damai.cn/bj/", target="_blank") 银川
+                                    cite 12
+                                    a(title="海外", href="//www.damai.cn/bj/", target="_blank") 海外
+                                    cite 34
+                                    a(title="吉林", href="//www.damai.cn/bj/", target="_blank") 吉林
+                                    cite 3
+                                    a(title="丹东", href="//www.damai.cn/bj/", target="_blank") 丹东
+                                    cite 1
+                                    a(title="潍坊", href="//www.damai.cn/bj/", target="_blank") 潍坊
+                                    cite 4
+                                    a(title="营口", href="//www.damai.cn/bj/", target="_blank") 营口
+                                    cite 1
+                    dl.place-part
+                        dt.pn-left 华东地区
+                        dd
+                            ul
+                                li
+                                    a(title="上海", href="//www.damai.cn/bj/", target="_blank") 上海
+                                    cite 622
+                                    a(title="南京", href="//www.damai.cn/bj/", target="_blank") 南京
+                                    cite 123
+                                    a(title="台州", href="//www.damai.cn/bj/", target="_blank") 台州
+                                    cite 5
+                                    a(title="杭州", href="//www.damai.cn/bj/", target="_blank") 杭州
+                                    cite 205
+                                    a(title="宁波", href="//www.damai.cn/bj/", target="_blank") 宁波
+                                    cite 53
+                                    a(title="无锡", href="//www.damai.cn/bj/", target="_blank") 无锡
+                                    cite 34
+                                    a(title="温州", href="//www.damai.cn/bj/", target="_blank") 温州
+                                    cite 3
+                                    a(title="苏州", href="//www.damai.cn/bj/", target="_blank") 苏州
+                                    cite 80
+                                    a(title="常州", href="//www.damai.cn/bj/", target="_blank") 常州
+                                    cite 18
+                                    a(title="南通", href="//www.damai.cn/bj/", target="_blank") 南通
+                                    cite 5
+                                    a(title="扬州", href="//www.damai.cn/bj/", target="_blank") 扬州
+                                    cite 9
+                                    a(title="舟山", href="//www.damai.cn/bj/", target="_blank") 舟山
+                                    cite 1
+                                    a(title="镇江", href="//www.damai.cn/bj/", target="_blank") 镇江
+                                    cite 1
+                                    a(title="合肥", href="//www.damai.cn/bj/", target="_blank") 合肥
+                                    cite 51
+                                    a(title="嘉兴", href="//www.damai.cn/bj/", target="_blank") 嘉兴
+                                    cite 35
+                                    a(title="徐州", href="//www.damai.cn/bj/", target="_blank") 徐州
+                                    cite 1
+                                    a(title="绍兴", href="//www.damai.cn/bj/", target="_blank") 绍兴
+                                    cite 12
+                                    a(title="金华", href="//www.damai.cn/bj/", target="_blank") 金华
+                                    cite 9
+                                    a(title="连云港", href="//www.damai.cn/bj/", target="_blank") 连云港
+                                    cite 1
+                                    a(title="泰州", href="//www.damai.cn/bj/", target="_blank") 泰州
+                                    cite 1
+                                    a(title="盐城", href="//www.damai.cn/bj/", target="_blank") 盐城
+                                    cite 1
+                                    a(title="安庆", href="//www.damai.cn/bj/", target="_blank") 安庆
+                                    cite 1
+                                    a(title="芜湖", href="//www.damai.cn/bj/", target="_blank") 芜湖
+                                    cite 2
+                                    a(title="蚌埠", href="//www.damai.cn/bj/", target="_blank") 蚌埠
+                                    cite 1
+                                    a(title="马鞍山", href="//www.damai.cn/bj/", target="_blank") 马鞍山
+                                    cite 1
+                                    a(title="铜陵", href="//www.damai.cn/bj/", target="_blank") 铜陵
+                                    cite 1
+                                    a(title="嘉兴", href="//www.damai.cn/bj/", target="_blank") 嘉兴
+                                    cite 35
+                    dl.place-part
+                        dt.pn-left 华南地区
+                        dd
+                            ul
+                                li
+                                    a(title="广州", href="//www.damai.cn/bj/", target="_blank") 广州
+                                    cite 167
+                                    a(title="港澳台", href="//www.damai.cn/bj/", target="_blank") 港澳台
+                                    cite 58
+                                    a(title="深圳", href="//www.damai.cn/bj/", target="_blank") 深圳
+                                    cite 171
+                                    a(title="南宁", href="//www.damai.cn/bj/", target="_blank") 南宁
+                                    cite 19
+                                    a(title="佛山", href="//www.damai.cn/bj/", target="_blank") 佛山
+                                    cite 24
+                                    a(title="福州", href="//www.damai.cn/bj/", target="_blank") 福州
+                                    cite 27
+                                    a(title="东莞", href="//www.damai.cn/bj/", target="_blank") 东莞
+                                    cite 17
+                                    a(title="厦门", href="//www.damai.cn/bj/", target="_blank") 厦门
+                                    cite 44
+                                    a(title="海口", href="//www.damai.cn/bj/", target="_blank") 海口
+                                    cite 16
+                                    a(title="珠海", href="//www.damai.cn/bj/", target="_blank") 珠海
+                                    cite 10
+                                    a(title="泉州", href="//www.damai.cn/bj/", target="_blank") 泉州
+                                    cite 5
+                                    a(title="中山", href="//www.damai.cn/bj/", target="_blank") 中山
+                                    cite 18
+                                    a(title="惠州", href="//www.damai.cn/bj/", target="_blank") 惠州
+                                    cite 4
+                                    a(title="江门", href="//www.damai.cn/bj/", target="_blank") 江门
+                                    cite 7
+                                    a(title="汕头", href="//www.damai.cn/bj/", target="_blank") 汕头
+                                    cite 2
+                    dl.place-part
+                        dt.pn-left 中西部
+                        dd
+                            ul
+                                li
+                                    a(title="成都", href="//www.damai.cn/bj/", target="_blank") 成都
+                                    cite 194
+                                    a(title="重庆", href="//www.damai.cn/bj/", target="_blank") 重庆
+                                    cite 145
+                                    a(title="武汉", href="//www.damai.cn/bj/", target="_blank") 武汉
+                                    cite 142
+                                    a(title="昆明", href="//www.damai.cn/bj/", target="_blank") 昆明
+                                    cite 45
+                                    a(title="南昌", href="//www.damai.cn/bj/", target="_blank") 南昌
+                                    cite 49
+                                    a(title="长沙", href="//www.damai.cn/bj/", target="_blank") 长沙
+                                    cite 75
+                                    a(title="贵阳", href="//www.damai.cn/bj/", target="_blank") 贵阳
+                                    cite 38
+                                    a(title="兰州", href="//www.damai.cn/bj/", target="_blank") 兰州
+                                    cite 15
+                                    a(title="株洲", href="//www.damai.cn/bj/", target="_blank") 株洲
+                                    cite 75
+                                    a(title="乌鲁木齐", href="//www.damai.cn/bj/", target="_blank") 乌鲁木齐
+                                    cite 4
+                                    a(title="洛阳", href="//www.damai.cn/bj/", target="_blank") 洛阳
+                                    cite 3
+                                    a(title="拉萨", href="//www.damai.cn/bj/", target="_blank") 拉萨
+                                    cite 22
+                                    a(title="西宁", href="//www.damai.cn/bj/", target="_blank") 西宁
+                                    cite 2
+            .head-right
+                .searchInput
+                    input(type="text" , placeholder="请输入演出、赛事、艺人、场馆名称")
+                    a(href="")
+                .login
+                    img(src="./images/detail-user.png", alt="")
+                    span.login-word
+                        a(href="") 登录
+                        span |
+                        a(href="") 注册
+    .content
+        h6.title #{detail[0].name}
+        .main
+            .main-left
+                .post
+                    img(src=detail[0].imageUrl, alt="")
+                    .share
+                        span 分享到：
+                        a.share-a1(href="")
+                        a.share-a2(href="")
+                        a.share-a3(href="")
+                .introduce
+                    h3.intro-title
+                        span #{detail[0].name}
+                        a.m-flowers(href="javascript")
+                            span(class="ico ico-5")
+                            span.num 116
+                    h4.h4
+                        span.lq-icon
+                        span(style="padding: 0 10px;") #{detail[0].detailAd}
+                        span.rq-icon
+                    .schedule
+                        .wrap
+                            .line
+                            .part
+                                h4.normal-word 项目待定
+                                span.token
+                            .part
+                                h4.normal-word 预售/预订
+                                if(detail[0].ticketStatus == 2) 
+                                  span.token2
+                                else
+                                  span.token 
+                            .part
+                                h4.normal-word 售票中
+                                if(detail[0].ticketStatus == 3) 
+                                  span.token2
+                                else
+                                  span.token3  
+                            .part
+                                h4.normal-word 演出开始
+                                span.token3
+                    .time-warning
+                        .tw-token
+                            i
+                        p.tw-tip 项目将于8月14日 11:18在大麦App开启预售，11:48网页同步预售。请您提前下载大麦App，感谢您的支持!
+                    .perform-time
+                        h3 演出时间
+                        .pt-time
+                            a(href="") #{detail[0].showTime}
+                    .ticket
+                        h3 选择票价
+                        ul
+                            li.hasCount
+                                a(href="") 280元（看台）
+                                span.ticket-tip 暂时无货，登陆试试运气~
+                            li
+                                a(href="") 380元（看台）
+                                span.ticket-tip 暂时无货，登陆试试运气~
+                            li
+                                a(href="") 580元（看台）
+                                span.ticket-tip 暂时无货，登陆试试运气~
+                            li
+                                a(href="") 880元（内场）
+                                span.ticket-tip 暂时无货，登陆试试运气~
+                            li
+                                a(href="") 1280元（内场）
+                                span.ticket-tip 暂时无货，登陆试试运气~
+                            li
+                                a(href="") 1680元（内场）
+                                span.ticket-tip 暂时无货，登陆试试运气~
+                    button 立即预定
+                    .sweep
+                        .erweima
+                            img(src="./images/detail-2d.jpg", alt="")
+                        span 手机扫一扫下单更快捷
+            .main-right
+                .wrap-again
+                    .ticket-agent
+                        .ta-left
+                            img(src="./images/ticket-agent.png", alt="")
+                        .ta-right
+                            a(href="#") 本项目由大麦网总代理
+                            a(href="#") MAITIX独家票务系统支持
+                    .identify-tip
+                        img(src="./images/shimingzhi.png")
+                        span 此项目需要身份证实名购买
+                    .perform
+                        p.perform-title 演出时间
+                        p
+                            |2018.09.22
+                            span.time-picker
+                    .perform
+                        p.perform-title 演出场馆
+                        p 黄龙体育中心(体育馆)
+                    .perform
+                        p.perform-title 票品支持
+                        ul
+                            li
+                                i.ticket-logo1
+                                a(href="") 超级票
+                            li
+                                i.ticket-logo2
+                                a(href="") 电子钱包
+                            li
+                                i.ticket-logo3
+                                a(href="") 返积分
+                            li
+                                i.ticket-logo4
+                                a(href="") 快递
+                    .ticket-express
+                        p.perform-title 实票配送
+                        .express-province
+                            .express-title
+                                span 杭州
+                                p(id="triangle")
+                            .menu
+                                ul.lst
+                                    li(class="itm first") 安徽、浙江、江苏、上海 12元，发货后1-3天到达
+                                    li.itm(data-spm-anchor-id="a2o6e.project.0.i5.43bd28079NvRO4") 澳门、香港、台湾 40元，发货后1-5天到达
+                                    li.itm 其它地区 18元，发货后1-3天到达
+                        p.express-intro 同城10元，发货后1-3天到达
+    .perform-detail
+        .pd-left
+            .nav
+                ul
+                    li(class="navli active" , id="pi")
+                        a(href="javascript:")
+                            i.t-line
+                            span 演出信息
+                    li(class="navli", id="bi")
+                        a(href="javascript:")
+                            span 购买说明
+                    li(class="navli", id="pw")
+                        a(href="javascript:")
+                            span 付款方式
+                a.order-btn(href="#")
+                    i
+                    span 立即预定
+            .pd-detail
+                .wrap-third
+                    .information(id="information")
+                        .pd-title
+                            span 基本信息
+                            i
+                        .table-info
+                            table
+                                tr
+                                    td(width="90", class="bg") 演出时间
+                                    td 2018.09.22
+                                    td(width="90" class="bg") 演出场馆
+                                    td(width="175") 黄龙体育中心(体育场)
+                                tr
+                                    td(width="90", class="bg") 演出时长
+                                    td 演出时间不少于160分钟
+                                    td(width="90" class="bg") 入场时间
+                                    td(width="175") 演出前约90分钟
+                                tr
+                                    td.bg 限购
+                                    td 每个账号最多购买4张
+                                    td.bg 儿童入场提示
+                                    td 儿童谢绝入场
+                                tr
+                                    td.bg 禁止携带物品
+                                    td 食品、饮料、相机、充电宝、打火机等。
+                                    td.bg 付款时效提醒
+                                    td 购票下单成功后需在15分钟内完成支付，未支付成功的订单，将在下单15分钟后系统自动取消，所选价位将自动释放后重新点亮，大家可及时刷新购票页面进行购买。
+                                tr
+                                    td.bg 实名制
+                                    td 购买时您需要输入购票人身份证信息，每张门票对应一个证件号
+                                    td.bg 座位类型
+                                    td 请按门票对应位置，有序对号入座
+                                tr
+                                    td.bg 物品寄存
+                                    td 无寄存处，请自行保管携带物品
+                                    td.bg 主演演员（团体）
+                                    td 张杰
+                                tr
+                                    td.bg 大麦网首次开售时全场可售门票总张数
+                                    td 15000张
+                                    td.bg 最低演出曲目数
+                                    td 最少演出35首歌曲
+                                tr
+                                    td.bg 票品类型
+                                    td 纸质票
+                                    td.bg 入场方式
+                                    td 纸质票
+                                tr
+                                    td.bg 退换政策
+                                    td 票品不支持退换。如无法正常观看，还请自行处理，给您带来不便敬请谅解
+                                    td.bg
+                                    td
+                    .special-tip
+                        .pd-title
+                            span 温馨提示
+                            i
+                        .table-info
+                            table.m-table2
+                                tbody
+                                    tr
+                                        td(width="90" class="bg") 支付限额
+                                        td 部分银行支付可能有一定限额，请提前检查银行卡的限额，或可充值至大麦电子钱包进行支付。
+                                    tr
+                                        td.bg 付款时效提醒
+                                        td 购票下单成功后需在15分钟内完成支付，未支付成功的订单，将在下单15分钟后系统自动取消，所选价位将自动释放后重新点亮，大家可及时刷新购票页面进行购买。
+                                    tr
+                                        td.bg 缺货登记提醒
+                                        td 所需票价若为灰色，说明已经售完。您可以在当前页面进行缺货登记，后期如果有票会以短信形式及时通知。
+                                    tr
+                                        td.bg 发票说明
+                                        td 自2016年5月1日起，凡在大麦网购票需获取发票的客户，烦请您在项目演出前按照增值税税法相关规定提供我们必要的发票信息，演出结束后将统一由项目主办单位开具增值税发票，发票开出后我们将及时通知您收取方式，演出结束后将不支持开具发票申请，由此给您造成的不便我们深表歉意，感谢您的理解与支持！
+                                    tr
+                                        td.bg 演出前配送
+                                        td 演出前三天不支持快递配送，未开通电子票项目可选择上门自取，开通电子票项目可选购电子票。
+            .buy-intro
+                .wrap-third
+                    .special-tip
+                        .pd-title
+                            span 特别提示
+                            i
+                        .di-content
+                            .st-intro
+                                h3 售前提示
+                                p
+                                    |1.为避免快递配送不能及时送达，演出距开场时间少于3天时不提供【快递配送】服务，请您谅解！您可以选择电子票或在线支付后上门自取纸质票。
+                                    a(href="//help.damai.cn/damai/contents/277/5966.html", target="_blank", title="点击查看上门取票地址") 点击查看上门取票地址
+                                p 2.凡演出票类商品，开票时间一般为演出前二到四周，正式开票后会第一时间短信通知您，请注意接收。
+                                p 3.如您不是通过“选座购买”通道进行的票品购买，最终票品数量视项目主办方及场馆情况而定，正式开票后大麦网将根据用户付款先后顺序依次配票，可能存在票品不足不能为您配票的风险，如最终未能配票，大麦网承诺全额退款，但不承担其他损失。
+                            .st-intro
+                                h3 支付方式
+                                p 网上银行（招商银行等） 支付平台（支付宝等） 转账汇款(招商银行等)
+                                a(href="//help.damai.cn/damai/contents/281/5740.html" , target="_blank" , title="查看详情") 查看详情
+                            .st-intro
+                                h3 退/换货说明
+                                p 针对不可抗力和非不可抗力的退/换票情况和处理，请点击查阅
+                                a(title="大麦网退换货说明" , target="_blank" , href="//help.damai.cn/damai/contents/299/2228.html") 大麦网退换货说明
+                    .buy-ticket
+                        .pd-title
+                            span 无线端购票
+                            i
+                        .di-content
+                            .st-intro
+                                p 1.  使用智能设备用户在各应用商店中搜索"大麦"下载安装客户端，购票体验更流畅
+                                p 2.  非智能设备用户可浏览器访问m.damai.cn进行演出查询，随时购票
+                            .appLink
+                                a(href="//mapi.damai.cn/href.aspx?id=1", target="_blank", class="iphone") iphone版
+                                a(href="//mapi.damai.cn/href.aspx?id=2", target="_blank", class="ipad") ipad版
+                                a(href="//mapi.damai.cn/href.aspx?id=5", target="_blank", class="android") android版
+                    .order-online
+                        .pd-title
+                            span 网上订购
+                            i
+                        .di-content
+                            img(src="./images/detail-process.jpg", alt="")
+                    .order-phone
+                        .pd-title
+                            span 电话订购
+                            i
+                        .di-content
+                            p(id="phone") 全国统一服务热线：
+                                strong.hotline 10103721 / 4006103721
+                    .order-home
+                        .pd-title
+                            span 上门订购
+                            i
+                        .di-content
+                            p 大麦网杭州分部
+                            p
+                                |办公地址：杭州市西湖区西溪路556号阿里中心·杭州Z空间1号楼一层旁
+                                a.c7(href="//map.damai.cn/Traffic/goThere.aspx?endCity=%e6%9d%ad%e5%b7%9e&amp;to=1&amp;end_x_y=120.107877,30.267042&amp;end=%e5%a4%a7%e9%ba%a6%e7%bd%91%e6%9d%ad%e5%b7%9e%e5%88%86%e9%83%a8", target="_blank", title="点击查看如何到达") 点击查看如何到达
+                            p 营业时间：星期一至星期日9:00-18:00
+                            p
+                                |支付说明：支持现金和刷卡支付
+                                a.c7(href="//map.damai.cn/traffic/circumjacent.aspx?action=search&amp;cityName=%e6%9d%ad%e5%b7%9e&amp;cityId=1580&amp;Keyword=%e5%a4%a7%e9%ba%a6%e7%bd%91%e6%9d%ad%e5%b7%9e%e5%88%86%e9%83%a8&amp;option=bank&amp;CenterLngLat=120.107877,30.267042", target="_blank", title="点击查看周边提款") 点击查看周边提款
+            .pay-way
+                .wrap-third
+                    .pay-online
+                        .pd-title
+                            span 在线支付
+                            i
+                        .di-content
+                            .st-intro
+                                p
+                                    |支持多家网上银行、支付平台（支付宝、快钱、银联、微信支付等）在线支付，
+                                    a(href="//help.damai.cn/damai/channels/281.html", target="_blank") 查看详情
+                            br
+                            .st-intro
+                                h3 支付平台
+                                .pay-img
+                                    img(src="./images/detail-alipay.jpg", alt="")
+                                    img(src="./images/detail-wechat.jpg", alt="")
+                            br
+                            .st-intro
+                                h3 网上银行
+                                ul.net-bank
+                                    li
+                                        img(src="./images/detail-bank1.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank2.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank3.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank4.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank5.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank6.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank7.jpg", alt="")
+                                    li
+                                        img(src="./images/detail-bank8.jpg", alt="")
+                    .pay-count
+                        .pd-title
+                            span 柜台支付
+                            i
+                        .di-content
+                            .st-intro
+                                p
+                                    |您也可以选择就近的公司网点，到柜台直接付款购买，
+                                    a(href="//help.damai.cn/damai/channels/284.html", target="_blank") 查看分公司上门地址
+                    .economic-wallet
+                        .pd-title
+                            span 电子钱包
+                            i
+                        .di-content
+                            .st-intro
+                                p
+                                    |电子钱包是由大麦网自主研发的第三方支付平台，为每一个用户在购票过程中提供"简单、安全、快速"的在线支付解决方案；
+                                    a(href="//sale.damai.cn/2017dzqb/index.html", target="_blank") 查看详情
+        .pd-right
+            .top-logo
+                .client-2d
+                    img(src="./images/kehuduan.png", alt="")
+                    p.word1 比pc更迅猛
+                    p.word2 提前开抢
+                a.top-infor(href="")
+                    img(src="./images/i.png", alt="")
+                    .right-word
+                        h3 大麦客户端
+                        p.order-ticket 抢票神器！随时随地尊享优惠
+                        span
+            .hot-recommend
+                h4.singer-title
+                    span 热门推荐
+                ul.wrap-right
+                    li
+                        .hot(id="one")
+                            span.cube
+                            .hot-right
+                                p 张杰2018“未•LIVE”巡回演唱会-太原站
+                                p 2018-08-24 20:00:00
+                        .hot-post(id="other", style="...")
+                            .post-intro
+                                a(href="")
+                                    img(src="./images/detail-post.jpg", alt="")
+                                a.intro(href="") 张杰2018“未•LIVE”巡回演唱会-太原站
+                        .hot
+                            span.cube
+                            .hot-right
+                                p 2018张韶涵"旅程"世界巡回演唱会 杭州站
+                                p 2018-11-10 19:30:00
+                        .hot-post
+                            .post-intro
+                                a(href="")
+                                    img(src="./images/zhangshaohan.jpg", alt="")
+                                a.intro(href="") 2018张韶涵"旅程"世界巡回演唱会 杭州站
+                        .hot
+                            span.cube
+                            .hot-right
+                                p 鹿晗2018“RE: X”巡回演唱会 杭州站
+                                p 2018-10-13 19:30:00
+                        .hot-post
+                            .post-intro
+                                a(href="")
+                                    img(src="./images/luhan.jpg", alt="")
+                                a.intro(href="") 鹿晗2018“RE: X”巡回演唱会 杭州站
+                        .hot
+                            span.cube
+                            .hot-right
+                                p 杨丞琳＂青春住了谁＂巡回演唱会 杭州站
+                                p 2018-10-27 19:30:00
+                        .hot-post
+                            .post-intro
+                                a(href="")
+                                    img(src="./images/yangchenglin.jpg", alt="")
+                                a.intro(href="") 杨丞琳＂青春住了谁＂巡回演唱会 杭州站
+                        .hot
+                            span.cube
+                            .hot-right
+                                p Jessie J 中国巡演 杭州站
+                                p 2018-09-14 20:00:00
+                        .hot-post
+                            .post-intro
+                                a(href="")
+                                    img(src="./images/JessiaJ.jpg", alt="")
+                                a.intro(href="") Jessie J 中国巡演 杭州站
+            .scan-history
+                h4.singlr-title
+                    span 浏览历史
+                ul.wrap-right
+                    li.wr-list
+                        span.cube
+                        a(href="") 2018周杰伦【地表最强2】世界巡回演唱会-洛阳站（9月29日）
+                    li.wr-list
+                        span.cube
+                        a(href="") 江小白YOLO青年文化节 长沙站
+                    li.wr-list
+                        span.cube
+                        a(href="") 你的名字——龙猫乐队动漫钢琴浪漫视听音乐会
+    .right-token
+        ul
+            li.first_li
+                a(href="#") 在线客服
+            li.second_li
+                a(href="#")
+                    span
+                    p.hoverTip 调查问卷
+            li.third_li
+                a(href="#")
+                    span
+                    p.hoverImg
+                        img(src="./images/hzweixin.jpg", alt="")
+            li.backTop
+                a(href="")
+                    span
+                    p.hoverTip 返回顶部
+    .footer
+        .f-top
+            .f-t-middle
+                a(href="#") 帮助中心
+                a(href="#") 公司介绍
+                a(href="#") 品牌识别
+                a(href="#") 公司大事记
+                a(href="#") 协议及隐私权政策
+                a(href="#") 廉正举报
+                a(href="#") 联系合作
+                a(href="#") 招聘信息
+                a(href="#") 防骗秘籍
+        .f-box
+            p
+                a(href="#", target="_blank") 京ICP证031057号
+                span |
+                a(href="#", target="_blank") 京ICP备11043884号
+                span |
+                a(href="#", target="_blank")
+                    img(src="./images/police.png", class="vm")
+                |京公网安备11010102000430号
+                a(href="#", target="_blank") 广播电视节目制作经营许可证 (京)字第02253号
+                a(href="#", target="_blank") 网络文化经营许可证 京网文[2016]3438-413号
+                span |
+                a(href="#", target="_blank") 营业性演出许可证 京市演587号
+            p 北京红马传媒文化发展有限公司 版权所有 大麦网 Copyright 2003-2018 All Rights Reserved
+            p
+                a(rel="nofollow", title="中国票务在线",target="_blank", href="//www.damai.cn/")
+                    img(class="mr10", src="./images/piao.png")
+                a(rel="nofollow", title="电子营业执照",target="_blank", href="#")
+                    img(class="mr10", src="./images/f2.png", style="display: inline;")
+                span#siteseal
+                    img(style="cursor:pointer;cursor:hand", src="./images/f1.gif", onclick="verifySeal();", alt="SSL site seal - click to verify")
+                a(rel="nofollow", target="_blank", href="https://www.pcisecuritystandards.org/")
+                    img(src="./images/f3.png" class="mr10")
+                a(rel="nofollow", target="_blank", href="#")
+                    img(src="./images/f4.png", class="mr10")
+                a(target="_blank", href="#")
+                    img(src="./images/f5.png")
+    script.
+      status = "#{ticketStatus}"   
+      if(status == 3){
+        $('.line').append("<style>.line::after{width:50%}</style>");
+      }else{
+        $('.line').append("<style>.line::after{width:25%}</style>");
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

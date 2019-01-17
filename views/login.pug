@@ -1,0 +1,80 @@
+doctype html
+head
+  meta(charset="UTF-8")
+  title 登录
+  link(rel="stylesheet", href="./stylesheets/login.css")
+body
+  .top
+    a(href="#")
+      img(src="./images/logo.png")
+    a(href="#")
+      input(type="button" value="English")
+  .main
+    a(href="#")
+      img(src="./images/renwu.jpg", class="banner")
+    #tabs
+      div.neibu
+        form(action='/login', method='post', autocomplete='off')
+          .input_box
+            .input_img
+              img(src="./images/user.png")
+            input(type="text", class="input1", placeholder="请输入手机号", name="account",value=`${account?account:""}`,onfocus="hide()",onblur="return check()")
+          .errorTip  
+          .input_box
+            .input_img
+              img(src="./images/mima.png")
+            input(type="password", class="input1", placeholder="请输入登录密码",  name="password",value=`${password?password:""}`,onfocus="hide()")
+          input(type="submit", value="登录", class="input2")
+          .share
+            a(href="#")
+              img(src="./images/weixin.png")
+            a(href="#")
+              img(src="./images/QQ.png")
+            a(href="#")
+              img(src="./images/weibo.png")
+            a(href="#")
+              img(src="./images/zhifubao.png")
+          p.tiaozhuan
+            a(href="#") 忘记密码
+            a(href="register") 免费注册    
+      if(error)    
+        .message_tip
+          .message_content
+            .message_custom_content
+              span.icon.error    
+              span #{error}
+  .footer
+    .first_line
+      a(href="#") 帮助中心
+      a(href="#") 公司介绍
+      a(href="#") 品牌识别
+      a(href="#") 公司大事记
+      a(href="#") 协议及隐私权政策
+      a(href="#") 廉正举报
+      a(href="#") 联系合作
+      a(href="#") 招聘信息
+      a(href="#") 防骗秘籍
+    .second_line
+      .logo_f
+        img(src="./images/logo_f.png")
+      .erweima
+        img(src="./images/erweima_f.png")
+        p APP下载
+      div
+        .qianhao
+          a(href="#", id="special") 京ICP证031057号
+          a(href="#") 京ICP备11043884号
+          a(href="#") 京公网安备11010102000430号
+          a(href="#") 广播电视节目制作经营许可证 (京)字第02253号
+          a(href="#") 网络文化经营许可证 京网文[2016]3438-413号
+          a(href="#") 营业性演出许可证 京市演587号
+        p 北京红马传媒文化发展有限公司 版权所有大麦网Copyright 2003-2018 All Rights Reserved
+        .shangjiaImg
+          img(src="./images/footer1.gif")
+          img(src="./images/footer2.png")
+          img(src="./images/footer3.png")
+          img(src="./images/footer4.png")
+          img(src="./images/footer5.png")
+  script(src="./javascripts/jquery-3.3.1.js")
+  script(style="text/javascript" , src="./javascripts/login.js")
+  //- script(src="./javascripts/loginAjax.js")
