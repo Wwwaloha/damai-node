@@ -68,4 +68,18 @@ $(function(){
     $(".backTop").click(function(){
         $("html,body").animate({scrollTop:"0px"},800);
     })
+    $(".tickets").click(function(){
+      $(this).toggleClass("select_a")
+      if($(this).hasClass("select_a")) {
+        $(this).attr("data-select","true")
+      }else{
+        $(this).attr("data-select","false")
+      }
+    })
 });
+
+// function selectIt(ele) {
+//   // $(".tickets").not(this).removeClass("select_a")
+//   $(ele).
+//   // $(".tickets").not(this).attr("data-select","false")
+// }

@@ -188,7 +188,7 @@ html(lang='en')
           .login_title
             img.login-img(src='images/header/login.png', alt='')
             if(account)
-              span #{account}
+              span #{username}
             else  
               span 登录
           .login-wrap
@@ -196,7 +196,7 @@ html(lang='en')
             .login-list
               a.login-li(href=`${account?"/userInfo?account="+account:"/login"}`) 个人信息
               a.login-li(href='') 账号设置
-              a.login-li(href='') 订单管理
+              a.login-li(href='/orderManage') 订单管理
         .download
           img.download-img(src='images/header/download.png', alt='')
           span 下载
@@ -247,7 +247,7 @@ html(lang='en')
         a(href='/search?type=opera')
           p.category__icon.icon-2
           p 话剧歌剧
-        a(href='/search?type=match')
+        a(href='/search?type=sport')
           p.category__icon.icon-3
           p 体育赛事
         a(href='/search?type=family')
@@ -274,142 +274,149 @@ html(lang='en')
     .concert.w1200
       .box-top
         span.header-title 演唱会
-        a(href='/search?type=concert') 查看全部   
+        a(href='/search?type=concert&account='+account) 查看全部
       .box_content  
         .c-left-img
-          a.box-bottom(href='#')
-            img.c-left-bg(src=special[0].imageUrl, alt='')
+          a.box-bottom(href=`/detail?name=${concert[0].name}&type=${concert[0].type}&account=${account}`)
+            img.c-left-bg(src=concert[0].imageUrl, alt='')
             .bg-left-detail
-              p.big-info #{special[0].name}
-              p.big-price ￥#{special[0].price}起
+              p.big-info #{concert[0].name}
+              p.big-price ￥#{concert[0].price}起
         .c-right-info
           .crinfo_line
             each concerts,index in concert
               if(index >0 && index <4)
-                a(href='#')
-                  .itemimg
-                    img(src=concerts.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${concerts.name}&type=${concerts.type}&account=${account}`)
+                    .itemimg
+                      img(src=concerts.imageUrl, alt='')
                   .iteminfo
-                    .title(title=special[0].name) #{concerts.name}
+                    a.title(title=concerts.name,href=`/detail?name=${concerts.name}&type=${concerts.type}&account=${account}`) #{concerts.name}
                     .venue #{concerts.address}
                     .showtime #{concerts.showTime}
                     .price ￥#{concerts.price}起
           .crinfo_line.second
             each concerts,index in concert
               if(index >3 && index <7)
-                a(href='#')
-                  .itemimg
-                    img(src=concerts.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${concerts.name}&account=${account}`)
+                    .itemimg
+                      img(src=concerts.imageUrl, alt='')
                   .iteminfo
-                    .title #{concerts.name}
+                    a.title(title=concerts.name,href=`/detail?name=${concerts.name}&type=${concerts.type}&account=${account}`) #{concerts.name}
                     .venue #{concerts.address}
                     .showtime #{concerts.showTime}
-                    .price ￥#{concerts.price}起        
+                    .price ￥#{concerts.price}起    
     .drama.w1200
       .box-top
         span.header-title 戏剧歌剧
-        a(href='/search?type=opera') 查看全部
+        a(href='/search?type=opera&account='+account) 查看全部
       .box_content   
         .c-left-img
-          a.box-bottom(href='#')
-            img.c-left-bg(src=special[1].imageUrl, alt='')
+          a.box-bottom(href=`/detail?name=${opera[1].name}&type=${opera[1].type}&account=${account}`)
+            img.c-left-bg(src=opera[1].imageUrl, alt='')
             .bg-left-detail
-              p.big-info #{special[1].name}
-              p.big-price ￥#{special[1].price}起
+              p.big-info #{opera[1].name}
+              p.big-price ￥#{opera[1].price}起
         // 右边
         .c-right-info
           .crinfo_line
             each operas,index in opera
               if(index >0 && index <4)
-                a(href='#')
-                  .itemimg
-                    img(src=operas.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${operas.name}&type=${operas.type}&account=${account}`)
+                    .itemimg
+                      img(src=operas.imageUrl, alt='')
                   .iteminfo
-                    .title(title=special[0].name) #{operas.name}
+                    a.title(title=operas.name,href=`/detail?name=${operas.name}&type=${operas.type}&account=${account}`) #{operas.name}
                     .venue #{operas.address}
                     .showtime #{operas.showTime}
                     .price ￥#{operas.price}起
           .crinfo_line.second
             each operas,index in opera
               if(index >3 && index <7)
-                a(href='#')
-                  .itemimg
-                    img(src=operas.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${operas.name}&type=${operas.type}&account=${account}`)
+                    .itemimg
+                      img(src=operas.imageUrl, alt='')
                   .iteminfo
-                    .title #{operas.name}
+                    a.title(title=operas.name,href=`/detail?name=${operas.name}&type=${operas.type}&account=${account}`) #{operas.name}
                     .venue #{operas.address}
                     .showtime #{operas.showTime}
-                    .price ￥#{operas.price}起   
+                    .price ￥#{operas.price}起
     .games.w1200
       .box-top
         span.header-title 体育比赛
-        a(href='/search?type=match') 查看全部
+        a(href='/search?type=sport&account='+account) 查看全部
       .box_content   
         .c-left-img
-          a.box-bottom(href='#')
-            img.c-left-bg(src=special[2].imageUrl, alt='')
+          a.box-bottom(href=`/detail?name=${match[2].name}&type=${match[2].type}&account=${account}`)
+            img.c-left-bg(src=match[2].imageUrl, alt='')
             .bg-left-detail
-              p.big-info #{special[2].name}
-              p.big-price ￥#{special[2].price}起
-        // 右边
+              p.big-info #{match[2].name}
+              p.big-price ￥#{match[2].price}起
         .c-right-info
           .crinfo_line
             each matches,index in match
               if(index >0 && index <4)
-                a(href='#')
-                  .itemimg
-                    img(src=matches.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${matches.name}&type=${matches.type}&account=${account}`)
+                    .itemimg
+                      img(src=matches.imageUrl, alt='')
                   .iteminfo
-                    .title(title=special[0].name) #{matches.name}
+                    a.title(title=matches.name,href=`/detail?name=${matches.name}&type=${matches.type}&account=${account}`) #{matches.name}
                     .venue #{matches.address}
                     .showtime #{matches.showTime}
                     .price ￥#{matches.price}起
           .crinfo_line.second
             each matches,index in match
               if(index >3 && index <7)
-                a(href='#')
-                  .itemimg
-                    img(src=matches.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${matches.name}&type=${matches.type}&account=${account}`)
+                    .itemimg
+                      img(src=matches.imageUrl, alt='')
                   .iteminfo
-                    .title #{matches.name}
+                    a.title(title=matches.name,href=`/detail?name=${matches.name}&type=${matches.type}&account=${account}`) #{matches.name}
                     .venue #{matches.address}
                     .showtime #{matches.showTime}
-                    .price ￥#{matches.price}起   
+                    .price ￥#{matches.price}起
     .children.w1200
       .box-top
         span.header-title 儿童亲子
-        a(href='/search?type=family') 查看全部
+        a(href='/search?type=family&account='+account) 查看全部
       .box_content   
         .c-left-img
-          a.box-bottom(href='#')
-            img.c-left-bg(src=special[3].imageUrl, alt='')
+          a.box-bottom(href=`/detail?name=${family[3].name}&type=${family[3].type}&account=${account}`)
+            img.c-left-bg(src=family[3].imageUrl, alt='')
             .bg-left-detail
-              p.big-info #{special[3].name}
-              p.big-price ￥#{special[3].price}起
+              p.big-info #{family[3].name}
+              p.big-price ￥#{family[3].price}起
         // 右边
         .c-right-info
           .crinfo_line
             each familys,index in family
               if(index >0 && index <4)
-                a(href='#')
-                  .itemimg
-                    img(src=familys.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${familys.name}&type=${familys.type}&account=${account}`)
+                    .itemimg
+                      img(src=familys.imageUrl, alt='')
                   .iteminfo
-                    .title(title=special[0].name) #{familys.name}
+                    a.title(title=familys.name,href=`/detail?name=${familys.name}&type=${familys.type}&account=${account}`) #{familys.name}
                     .venue #{familys.address}
                     .showtime #{familys.showTime}
                     .price ￥#{familys.price}起
           .crinfo_line.second
             each familys,index in family
               if(index >3 && index <7)
-                a(href='#')
-                  .itemimg
-                    img(src=familys.imageUrl, alt='')
+                .ticket-detail
+                  a(href=`/detail?name=${familys.name}&type=${familys.type}&account=${account}`)
+                    .itemimg
+                      img(src=familys.imageUrl, alt='')
                   .iteminfo
-                    .title #{familys.name}
+                    a.title(title=familys.name,href=`/detail?name=${familys.name}&type=${familys.type}&account=${account}`) #{familys.name}
                     .venue #{familys.address}
                     .showtime #{familys.showTime}
-                    .price ￥#{familys.price}起   
+                    .price ￥#{familys.price}起
     .sidebar
       .item
         a(href='#')

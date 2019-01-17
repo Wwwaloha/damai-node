@@ -5,10 +5,11 @@ var search = require('../models/db')
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   var type = req.query.type
+  var account = req.query.account
   console.log("type",type)
   if(type) {
-    search.query(`select * from ${type} limit 5 `,[],function(result) {
-      res.render("search",{catalog: result})
+    search.query(`select * from ${type} limit 5;select * from user where account =? `,[account],function(result) {
+      res.render("search",{catalog: result[0],userInfo: result[1],account:account})
     })
   }
 });

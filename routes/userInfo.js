@@ -4,11 +4,15 @@ var resetInfo = require('../models/db')
 
 /* GET home page. */
 router.get('', function(req, res, next) {
-  var account = req.query.account
-  console.log(account)
-  resetInfo.query("select * from user where account=?",[account],function(info){
-    res.render("userInfo",{userInfo: info})
-  })
+  if(req.query.account){
+      var account = req.query.account
+      console.log(account)
+      resetInfo.query("select * from user where account=?",[account],function(info){
+          res.render("userInfo",{userInfo: info,account: account})
+      })
+  }else{
+    res.render("userInfo",{account: ''})
+  }
 });
 
 router.post('/update',function(req,res) {

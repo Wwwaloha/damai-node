@@ -8,13 +8,13 @@ router.get('/', function(req, res, next) {
     var user = req.query.account
   }
   console.log(user)
-  index.query('select * from `index` where logo=1;select * from `index` where type="concert";select * from `index` where type="opera";select * from `index` where type="match";select * from `index` where type="family";',[],function(rows) {
+  index.query('select * from `concert` where showIndex=1;select * from `opera` where showIndex=1;select * from `sport` where showIndex=1;select * from `family`  where showIndex=1;select * from user where account=?',[user],function(rows) {
     res.render('index', {
-      special: rows[0],
-      concert: rows[1],
-      opera: rows[2],
-      match: rows[3],
-      family: rows[4],
+      concert: rows[0],
+      opera: rows[1],
+      match: rows[2],
+      family: rows[3],
+      username: rows[4][0].username?rows[4][0].username:"",
       account: user
     });
   });

@@ -400,6 +400,7 @@
     color: #000;
 }
 .ticket{
+    display: flex;
     margin: 20px 0 10px 0;
     color: #999;
 }
@@ -419,13 +420,16 @@
     position: relative;
     float: left;
     width: 23.7%;
-    border: 1px dashed #ccc;
     margin: 0 5px 5px 0;
     text-align: center;
-    background: #f6f6f6;
 }
 .hasCount{
   background: white;
+  border: 1px solid #ccc;
+}
+.noCount{
+    background: #f6f6f6; 
+    border: 1px dashed #ccc; 
 }
 .ticket ul li a{
     display: block;
@@ -433,6 +437,10 @@
     text-decoration: none;
     color: #999;
     font-size: 12px;
+}
+.select_a {
+  border: 1px solid #ed0a75;
+  color: #ed0a75 !important;
 }
 .ticket-tip::before{
     width: 0;

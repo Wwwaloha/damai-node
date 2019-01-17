@@ -4,10 +4,10 @@ header{
     height: 70px;
 }
 .header{
-    padding: 0 5%;
-    height: 70px;
-    box-sizing: border-box;
-    display: flex;
+  width: 90%;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
 }
 .header-logo{
     width: 10%;
@@ -22,20 +22,20 @@ header{
     float: left;
 }
 .header-nav{
-    width: 20%;
+    width: 30%;
     height: 72px;
     margin: 0 auto;
     display: inline-block;
 }
 .header-search{
-    width: 45%;
+    width: 35%;
     height: 72px;
     margin: 0 auto;
     display: inline-block;
     position: relative;
 }
 .header-login{
-    width: 24%;
+    width: 20%;
     height: 72px;
     margin: 0 auto;
     display: inline-block;
@@ -238,7 +238,7 @@ body{
     position: absolute;
     right: 7%;
     top: 16px;
-    background: #FF1268;
+    background: #ed0a75;
     line-height: 43px;
     font-size: 16px;
     text-align: center;
@@ -251,7 +251,7 @@ body{
 .header-right{
   display: flex;
   align-items: center;
-  width: 23%;
+  width: 25%;
   height: 72px;
   justify-content: space-between;
 

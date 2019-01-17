@@ -10,8 +10,8 @@ body
       img.h-logo(src='images/header/logo.png', alt='')
     .header-nav
       .nav
-        a.nav-left(href='') 首页
-        a.nav-right(href='') 分类
+        a.nav-left(href='/index?account='+account) 首页
+        a.nav-right(href='/search?type=opera&account='+account) 分类
     .header-search
       img.search-icon(src='images/header/search.png', alt='')
       input.search-input(type='text', placeholder='搜索明星、演出、体育赛事')
@@ -23,9 +23,9 @@ body
         .login-wrap
           p
           .login-list
-            a.login-li(href='') 个人信息
+            a.login-li(href=`${account? "#":"/login"}`) 个人信息
             a.login-li(href='') 账号设置
-            a.login-li(href='') 订单管理
+            a.login-li(href='/orderManage') 订单管理
       .download
         img.download-img(src='images/header/download.png', alt='')
         span 下载

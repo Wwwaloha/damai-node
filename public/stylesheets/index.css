@@ -8,9 +8,9 @@ a{
 }
 body{
     font-family: "\5FAE\8F6F\96C5\9ED1";
+    text-decoration: none;
 }
 .header{
-  display: flex;
    padding-bottom:15px;
 }
 .adverse{
@@ -50,7 +50,7 @@ body{
   height: 194px
 }
 .w1200{
-    width: 1200px;
+    width: 90%;
     margin:0 auto;
 }
 .category {
@@ -155,6 +155,9 @@ body{
   display: flex;
   justify-content: space-between;
 }
+.ticket-detail{
+  display: flex;
+}
 .c-left-img{
   position: relative;
   width: 24%;
@@ -172,11 +175,7 @@ body{
   flex-direction: column;
   justify-content: space-between;
 }
-.c-right-info a{
-  display: flex;
-  height: 100%;
-}
-.c-right-info a .iteminfo{
+.iteminfo{
   position: relative;
   width: 145px;
   float: left;
@@ -223,7 +222,7 @@ body{
     color:#FF6BA5;
 }
 .bg-left-detail{
-  width: 98%;
+  width: 96.5%;
   position: absolute;
   bottom: 0;
   padding: 20px 10px;
